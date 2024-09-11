@@ -1,0 +1,12 @@
+resources:
+  jobs:
+    orchestration_job:
+      tasks:
+        - task_key: task_that_runs_the_notebook
+          notebook_task:
+            source: WORKSPACE
+            notebook_path: ../Untitled Notebook 2024-09-11 11_30_02
+      queue:
+        enabled: true
+      permissions: []
+      name: orchestration_job
