@@ -1,4 +1,4 @@
-# Project overview
+## Project overview
 
 This project is an ETL data engineering pipeline designed to automate the process of ingesting, transforming, and analyzing data from our internal provider. It consists of a Lakeflow pipeline built using Python, with the primary components being individual .py scripts that handle different stages of the ETL process, Databricks notebooks for exploratory data analysis, a dashboard for data reporting, and a Lakeflow job to orchestrate and schedule the entire process. The release management is automated in our CI/CD system. 
 

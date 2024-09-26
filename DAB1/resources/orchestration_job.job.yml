@@ -1,13 +1,19 @@
 resources:
   jobs:
     orchestration_job:
+      name: orchestration_job
       tasks:
         - task_key: task_that_runs_the_notebook2
-          notebook_task:
-            source: WORKSPACE
-            notebook_path: ../Untitled Notebook 2024-09-11 11_30_02
           min_retry_interval_millis: 0
+          notebook_task:
+            notebook_path: ../Some scheduled notebook.py
+            source: WORKSPACE
+        - task_key: second_task
+          depends_on:
+            - task_key: task_that_runs_the_notebook2
+          notebook_task:
+            notebook_path: ../Some scheduled notebook.py
+            source: WORKSPACE
       queue:
         enabled: true
       permissions: []
-      name: orchestration_job
